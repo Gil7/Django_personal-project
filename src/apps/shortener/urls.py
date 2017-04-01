@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from .views import index,VBCIndex
+from .views import index,VBCIndex,HomeView
 urlpatterns = [
-    url(r'^test/(?P<shortcode>[\w-]+)$', index ),
-    url(r'^test2/(?P<shortcode>[\w-]+)$', VBCIndex.as_view() ),
+    url(r'^test/(?P<shortcode>[\w-]+)/$', index ),
+    url(r'^test2/(?P<shortcode>[\w-]+)/$', VBCIndex.as_view() ),
+    
 ]

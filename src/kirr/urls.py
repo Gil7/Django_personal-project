@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
+from apps.shortener.views import HomeView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^', HomeView.as_view()),
     url(r'^urls/', include("apps.shortener.urls")),
 ]
